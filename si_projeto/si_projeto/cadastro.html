@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastrar Imóvel</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0d47a1, #1976d2);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .form-container {
+      background: #fff;
+      color: #333;
+      max-width: 500px;
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(21, 101, 192, 0.4);
+      padding: 40px 30px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #0d47a1;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #1976d2;
+      color: #fff;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0d47a1;
+    }
+
+    .voltar {
+      display: block;
+      text-align: center;
+      margin-top: 15px;
+      color: #1976d2;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .voltar:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Cadastrar Novo Imóvel</h2>
+    <form action="php/salvar.php" method="POST">
+
+      <label for="tipo">Tipo de Imóvel:</label>
+      <select name="tipo" id="tipo" required>
+        <option value="">Selecione...</option>
+        <option value="Casa">Casa</option>
+        <option value="Apartamento">Apartamento</option>
+        <option value="Terreno">Terreno</option>
+        <option value="Comercial">Comercial</option>
+      </select>
+
+      <label for="endereco">Endereço:</label>
+      <input type="text" name="endereco" id="endereco" required>
+
+      <label for="valor">Valor (R$):</label>
+      <input type="number" name="valor" id="valor" step="0.01" required>
+
+      <label for="descricao">Descrição:</label>
+      <textarea name="descricao" id="descricao" rows="4" required></textarea>
+
+      <button type="submit">Salvar Imóvel</button>
+    </form>
+
+    <a href="index.html" class="voltar">← Voltar ao Início</a>
+  </div>
+
+</body>
+</html>

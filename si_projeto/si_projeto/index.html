@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>Imobiliária</title>
+<style>
+/* Cole o CSS aqui */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0d47a1, #1976d2);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  background: #fff;
+  color: #333;
+  max-width: 450px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(21, 101, 192, 0.4);
+  padding: 40px 30px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #0d47a1;
+}
+
+p {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+a.button {
+  display: inline-block;
+  padding: 14px 30px;
+  margin: 10px 10px 0 10px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+a.button-blue {
+  background-color: #1976d2;
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(25, 118, 210, 0.4);
+}
+
+a.button-blue:hover {
+  background-color: #0d47a1;
+  box-shadow: 0 8px 20px rgba(13, 71, 161, 0.6);
+}
+
+a.button-orange {
+  background-color: #f57c00;
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(245, 124, 0, 0.4);
+}
+
+a.button-orange:hover {
+  background-color: #ef6c00;
+  box-shadow: 0 8px 20px rgba(239, 108, 0, 0.6);
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Bem-vindo ao sistema imobiliário</h1>
+
+  <p><a href="php/listar.php" class="button button-blue">Ver lista de imóveis</a></p>
+  <p><a href="cadastro.html" class="button button-orange">Cadastrar novo imóvel</a></p>
+</div>
+
+</body>
+</html>
